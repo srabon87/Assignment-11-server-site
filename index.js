@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const { MongoClient, ServerApiVersion } = require("mongodb");
-
+// const jwt = require("jsonwebtoken");
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -22,7 +22,7 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
 
-    await client.connect();
+    // await client.connect();
     console.log(
         "Pinged your deployment. You successfully connected to MongoDB!"
       );
@@ -73,8 +73,6 @@ async function run() {
         }
       });
       
-
-    
   } finally {
     
   }
